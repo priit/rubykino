@@ -1,0 +1,16 @@
+.row
+  #logo.large-4.large-centered.columns
+    %h1 Ruby Kino
+
+.row
+  .large-6.large-centered.columns
+    %ul.video-list
+      - @videos.each do |video|
+        %li
+          = link_to 'Vote up', video_votes_path(video.id)
+          = link_to video.title + ', ' + video.full_length, video.url
+      
+.row
+  .large-5.large-centered.columns
+    %h2 Suggest a new video:
+    = render 'videos/form', :video => @video

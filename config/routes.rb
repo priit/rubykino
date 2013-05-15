@@ -1,4 +1,12 @@
 Rubykino::Application.routes.draw do
+  root :to => 'root#index'
+  
+  resources :videos do
+    resources :votes
+  end
+  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

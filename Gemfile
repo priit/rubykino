@@ -6,6 +6,7 @@ gem 'pg', '0.15.1'
 gem 'jquery-rails', '2.1.4'
 gem 'devise', '2.2.3'
 gem 'cancan', '1.6.9'
+gem 'zurb-foundation', '4.1.6'
 
 group :assets do
   gem 'sass-rails',   '3.2.6'

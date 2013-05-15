@@ -1,0 +1,23 @@
+= form_for(video) do |f|
+  - if video.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(video.errors.count, "error")
+        prohibited this video from being saved:
+      %ul
+        - video.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :url, 'Url'
+    = f.text_field :url
+  .field
+    = f.label :length, 'Length in minutes'
+    = f.number_field :length
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .actions
+    = f.submit 'Suggest a new video'
