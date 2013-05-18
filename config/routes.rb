@@ -1,4 +1,7 @@
 Rubykino::Application.routes.draw do
+  resources :votes
+
+
   root :to => 'root#index'
   
   resources :videos do

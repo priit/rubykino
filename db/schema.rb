@@ -11,12 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515170422) do
+ActiveRecord::Schema.define(:version => 20130515192551) do
 
   create_table "videos", :force => true do |t|
     t.string   "title"
     t.string   "url"
     t.integer  "length"
+    t.integer  "user_id"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "voutes_count", :default => 0
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "video_id"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

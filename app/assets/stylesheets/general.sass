@@ -1,0 +1,77 @@
+$lightgray: #DEDAD1
+
+$main-color: $lightgray
+$link-color: $lightgray
+
+body
+  background-color: #222
+  color: $main-color
+  //font-family: verdana, arial, helvetica, sans-serif
+  font-family: 'Iceland', cursive
+  font-size: 13px
+  line-height: 18px
+
+p, ol, ul, td
+  //font-family: verdana, arial, helvetica, sans-serif
+  font-size: 24px
+  line-height: 1em
+
+pre
+  background-color: #eee
+  padding: 10px
+  font-size: 11px
+
+a
+  color: $link-color
+  &:visited
+    color: $link-color
+  &:hover
+    color: #fff
+    background-color: #000
+
+h2
+  color: $main-color
+  font-size: 24px
+  font-family: 'Iceland', cursive
+  line-height: 1em
+  font-weight: bold
+
+
+div
+  &.field, &.actions
+    margin-bottom: 10px
+
+#desc
+  padding-right: 30px
+
+#ship
+  float: right
+  margin-right: 50px
+
+#notice
+  color: green
+
+.field_with_errors
+  padding: 2px
+  background-color: red
+  display: table
+
+#error_explanation
+  width: 450px
+  border: 2px solid red
+  padding: 7px
+  padding-bottom: 0
+  margin-bottom: 20px
+  background-color: #f0f0f0
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px
+    margin-bottom: 0px
+    background-color: #c00
+    color: #fff
+  ul li
+    font-size: 12px
+    list-style: square
