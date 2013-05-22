@@ -3,6 +3,14 @@ class Video < ActiveRecord::Base
 
   validates :title, :url, :presence => true
 
+  has_many :votes
+
+  class << self
+    def top
+      order('votes_count desc')
+    end
+  end
+
   def full_length
     length.to_s + ' min'
   end

@@ -1,46 +1,47 @@
 class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
-  def index
-    @videos = Video.all
+  #def index
+    #@videos = Video.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @videos }
-    end
-  end
+    #respond_to do |format|
+      #format.html # index.html.erb
+      #format.json { render json: @videos }
+    #end
+  #end
 
   # GET /videos/1
   # GET /videos/1.json
-  def show
-    @video = Video.find(params[:id])
+  #def show
+    #@video = Video.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @video }
-    end
-  end
+    #respond_to do |format|
+      #format.html # show.html.erb
+      #format.json { render json: @video }
+    #end
+  #end
 
   # GET /videos/new
   # GET /videos/new.json
-  def new
-    @video = Video.new
+  #def new
+    #@video = Video.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @video }
-    end
-  end
+    #respond_to do |format|
+      #format.html # new.html.erb
+      #format.json { render json: @video }
+    #end
+  #end
 
   # GET /videos/1/edit
-  def edit
-    @video = Video.find(params[:id])
-  end
+  #def edit
+    #@video = Video.find(params[:id])
+  #end
 
   # POST /videos
   # POST /videos.json
   def create
     @video = Video.new(params[:video])
+    @video.user_id = current_user.id
 
     respond_to do |format|
       if @video.save

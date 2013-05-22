@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515192551) do
+ActiveRecord::Schema.define(:version => 20130522051328) do
+
+  create_table "users", :force => true do |t|
+    t.text     "env",        :default => "--- {}"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
 
   create_table "videos", :force => true do |t|
     t.string   "title"
@@ -21,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20130515192551) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "voutes_count", :default => 0
+    t.integer  "votes_count",  :default => 0
   end
 
   create_table "votes", :force => true do |t|

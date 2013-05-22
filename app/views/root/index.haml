@@ -38,8 +38,14 @@
     %ul.video-list
       - @videos.each do |video|
         %li
-          = link_to 'Vote up', video_votes_path(video.id)
-          = link_to video.title + ', ' + video.full_length, video.url
+          .title
+            = link_to video.title + ', ' + video.full_length, video.url
+          .votes
+            .vote
+              = render 'votes/form', :vote => video.votes.build
+            .vote-count
+              = t('votes', :count => video.votes.size)
+
     %h2 Suggest a new video:
     = render 'videos/form', :video => @video
 

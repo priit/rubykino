@@ -1,6 +1,6 @@
 class RootController < ApplicationController
   def index
-    @videos = Video.all
+    @videos = Video.top
     @video = Video.new
   end
 end

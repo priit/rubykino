@@ -9,15 +9,13 @@
           %li= msg
   .field
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title, :required => true
   .field
     = f.label :url, 'Url'
-    = f.text_field :url
-  .field
-    = f.label :length, 'Length in minutes'
-    = f.number_field :length
-  .field
-    = f.label :user_id
-    = f.number_field :user_id
+    = f.text_field :url, :required => true, :url => true
+  .field.video-length
+    = f.label :length, 'Video length'
+    = f.select :length, 
+      options_for_select(%w(1 5 10 15 20 30 40 50 60 90 120).map {|t| [" ~ #{t} min", t]})
   .actions
     = f.submit 'Suggest a new video'

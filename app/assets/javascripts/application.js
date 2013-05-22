@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require jquery-validation-1.11.1/dist/jquery.validate.min
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+jQuery(document).ready(function() {
+  $('#new_video').validate()
+});
