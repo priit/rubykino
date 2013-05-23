@@ -1,3 +1,7 @@
+body
+  overflow: scroll
+  padding-bottom: 100px
+
 #flash
   margin-top: 20px
   min-height: 60px
@@ -31,3 +35,130 @@ ul.video-list
   select
     float: right
     width: 160px
+
+ 
+@import "compass/css3/transform"
+
+.galaxy
+  position: absolute
+  top: 500px
+  left: 50%
+  height: 30px
+
+.stars
+  z-index: -100
+
+.star
+  z-index: -100
+  
+.black-hole
+  background: #222
+  width: 100px
+  height: 100px
+  margin-top: -60px
+  z-index: 100
+  
+@keyframes right-down
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(1000px,1000px)
+
+@keyframes right-up
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(1000px,-1000px)
+
+@keyframes left-up
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(-1000px,-1000px)
+
+@keyframes left-down
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(-1000px,1000px)
+
+@keyframes left
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(-1000px,0px)
+
+@keyframes right
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(1000px,0px)
+
+@keyframes up
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(0px,-1000px)
+
+@keyframes down
+  0%
+    @include translate(0px,0px)
+  100%
+    @include translate(0px,1000px)
+
+.star
+  animation: right-down 5s infinite
+  position: absolute
+  right: 50%
+  left: 50%
+  width: 10px
+  height: 10px
+
+.star1
+  animation: right-up 5s 2s infinite
+  
+.star2
+  animation: right-down 5s 1.2s infinite
+
+.star3
+  animation: left-up 5s 3.3s infinite
+
+.star4
+  animation: left-down 5s 1.6s infinite
+
+.star5
+  animation: left 4s 2.4s infinite
+
+.star6
+  animation: right 4s 3.9s infinite
+
+.star7
+  animation: up 5s 4.8s infinite
+
+.star8
+  animation: down 5s 1.9s infinite
+
+.star11
+  animation: right-up 5s 5.1s infinite
+  
+.star12
+  animation: right-down 5s 1.7s infinite
+
+.star13
+  animation: left-up 5s 4.7s infinite
+
+.star14
+  animation: left-down 5s 2.4s infinite
+
+.star15
+  animation: left 4s 4.4s infinite
+
+.star16
+  animation: right 4s 5.9s infinite
+
+.star17
+  animation: up 5s 6.8s infinite
+
+.star18
+  animation: down 5s 3.9s infinite
+
