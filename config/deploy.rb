@@ -41,6 +41,7 @@ after "deploy", "deploy:cleanup"
 namespace :deploy do
   task :precompile, :role => :app do  
     run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "cp #{shared_path}/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
     run "cd #{release_path}/ && rake assets:precompile"  
   end  
 end
