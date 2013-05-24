@@ -7,7 +7,7 @@ class Video < ActiveRecord::Base
 
   class << self
     def top
-      order('votes_count desc')
+      order('votes_count desc').where('videos.disabled_at IS NULL')
     end
   end
 
