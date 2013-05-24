@@ -6,7 +6,7 @@ require 'bundler/capistrano'
 # =============================================================================
 
 set :application, 'rubykino'
-set :repository,  "git@github.com:priit/rubykino.git"
+set :repository,  'git://github.com/priit/rubykino.git'
 
 set :stages, %w(st pr)
 set :default_stage, 'st'
@@ -35,7 +35,6 @@ end
 # HOOKS
 # =============================================================================
 
-after "deploy:update_code", "assets:update"
 after "deploy:finalize_update", "deploy:precompile"
 after "deploy", "deploy:cleanup"
 

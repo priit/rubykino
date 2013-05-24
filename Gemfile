@@ -7,13 +7,13 @@ gem 'jquery-rails', '2.1.4'
 gem 'devise', '2.2.3'
 gem 'cancan', '1.6.9'
 gem 'zurb-foundation', '4.1.6'
+gem 'haml', '4.0.2'
 
 group :assets do
   gem 'sass-rails',   '3.2.6'
   gem 'compass-rails', '1.0.3'
   #gem 'animation', '0.1.alpha.3'
   gem 'coffee-rails', '3.2.2'
-  gem 'haml', '4.0.2'
   gem 'therubyracer', '0.11.4', :platforms => :ruby
   gem 'uglifier', '2.0.1'
 end
