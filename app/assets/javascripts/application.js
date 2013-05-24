@@ -10,11 +10,14 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require modernizr.custom.js
 //= require jquery
 //= require jquery_ujs
 //= require foundation
 //= require jquery-validation-1.11.1/dist/jquery.validate.min
 //= require_tree .
+
+Modernizr.load();
 
 $(function(){ $(document).foundation(); });
 

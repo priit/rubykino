@@ -37,9 +37,6 @@ ul.video-list
     float: right
     width: 160px
  
-@import "compass/css3/transform"
-//@import "animate"
-
 
 .galaxy
   position: absolute
@@ -59,86 +56,4 @@ ul.video-list
   height: 100px
   margin-top: -60px
   z-index: 100
-
-@mixin star($name, $x,$y)
-  @-webkit-keyframes #{$name}
-    0%
-      -webkit-transform: translate(0px, 0px)
-    100%
-      -webkit-transform: translate(#{$x},#{$y})
-  @keyframes #{$name}
-    0%
-      @include translate(0px,0px)
-    100%
-      @include translate(#{$x},#{$y})
-
-@include star(right-down, 1000px, 1000px) 
-@include star(right-up, 1000px, -1000px) 
-@include star(left-up, -1000px, -1000px) 
-@include star(left-down, -1000px, 1000px) 
-@include star(left, -1400px, 0px) 
-@include star(right, 1400px, 0px) 
-@include star(up, 0px, 1000px) 
-@include star(down, 0px, -1000px) 
-  
-.star
-  position: absolute
-  right: 50%
-  left: 50%
-  width: 10px
-  height: 10px
-
-@mixin animation($options)
-  -ms-animation-name: ($options)
-  -webkit-animation: #{$options}
-  -moz-animation: #{$options}
-  animation: #{$options}
-
-.star1
-  @include animation(right-up 5s 1s infinite)
-  
-.star2
-  @include animation(right-down 5s 1.2s infinite)
-
-.star3
-  @include animation(left-up 5s 3.3s infinite)
-
-.star4
-  @include animation(left-down 5s 1.6s infinite)
-
-.star5
-  @include animation(left 4s 2.4s infinite)
-
-.star6
-  @include animation(right 4s 3.9s infinite)
-
-.star7
-  @include animation(up 5s 4.8s infinite)
-
-.star8
-  @include animation(down 5s 1.9s infinite)
-
-.star11
-  @include animation(right-up 5s 5.1s infinite)
-  
-.star12
-  @include animation(right-down 5s 1.7s infinite)
-
-.star13
-  @include animation(left-up 5s 4.7s infinite)
-
-.star14
-  @include animation(left-down 5s 2.4s infinite)
-
-.star15
-  @include animation(left 4s 4.4s infinite)
-
-.star16
-  @include animation(right 4s 5.9s infinite)
-
-.star17
-  @include animation(up 5s 6.8s infinite)
-
-.star18
-  @include animation(down 5s 3.9s infinite)
 
