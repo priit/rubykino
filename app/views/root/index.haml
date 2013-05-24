@@ -55,6 +55,9 @@
     %p
       = render 'shared/register'
 
+    %p
+      Code contribute? Fork it at 
+      = link_to 'Github', 'https://github.com/priit/rubykino'
 
   .large-6.columns
     %h2 Videos are selected by you: 
@@ -62,7 +65,7 @@
       - @videos.each do |video|
         %li
           .title
-            = link_to video.title + ', ' + video.full_length, video.url
+            = link_to video.title.strip + ', ' + video.full_length, video.url
           .votes
             .vote
               = render 'votes/form', :vote => video.votes.build
