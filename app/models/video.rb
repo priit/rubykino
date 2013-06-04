@@ -1,5 +1,5 @@
 class Video < ActiveRecord::Base
-  attr_accessible :length, :title, :url, :user_id
+  attr_accessible :title, :url, :user_id
 
   validates :title, :url, :presence => true
 
@@ -10,9 +10,5 @@ class Video < ActiveRecord::Base
       order('votes_count desc').where('videos.disabled_at IS NULL').
         where('videos.watched_at IS NULL')
     end
-  end
-
-  def full_length
-    length.to_s + ' min'
   end
 end

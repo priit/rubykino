@@ -13,9 +13,5 @@
   .field
     = f.label :url, 'Url'
     = f.text_field :url, :required => true, :url => true
-  .field.video-length
-    = f.label :length, 'Video length'
-    = f.select :length, 
-      options_for_select(%w(1 5 10 15 20 30 40 50 60 90 120).map {|t| [" ~ #{t} min", t]})
   .actions
     = f.submit 'Suggest a new video'

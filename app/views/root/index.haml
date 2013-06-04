@@ -65,7 +65,7 @@
       - @videos.each do |video|
         %li
           .title
-            = link_to video.title.strip + ', ' + video.full_length, video.url
+            = link_to video.title.strip, video.url
           .votes
             .vote
               = render 'votes/form', :vote => video.votes.build
