@@ -21,10 +21,7 @@
   .black-hole
     &nbsp;
 
-.row
-  #ship= image_tag 'slow-ship.gif'
-  #logo.large-4.large-centered.columns
-    = link_to image_tag('ruby-kino-222.png', :alt => 'Ruby Kino'), '/'
+= render 'shared/logo'
 
 .row
   #desc.large-6.columns
@@ -70,4 +67,6 @@
 
     %h2 Suggest a new video:
     = render 'videos/form', :video => @video
+
+    %p= link_to 'List of previously suggested videos', videos_path
 

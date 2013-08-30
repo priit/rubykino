@@ -1,14 +1,14 @@
 class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
-  #def index
-    #@videos = Video.all
+  def index
+    @videos = Video.previous
 
-    #respond_to do |format|
-      #format.html # index.html.erb
+    respond_to do |format|
+      format.html # index.html.erb
       #format.json { render json: @videos }
-    #end
-  #end
+    end
+  end
 
   # GET /videos/1
   # GET /videos/1.json

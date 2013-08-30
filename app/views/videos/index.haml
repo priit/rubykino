@@ -1,0 +1,8 @@
+= render 'shared/logo'
+
+.row
+  .large-10.columns
+    %h2 All suggested videos
+    %ul.previous-list
+      - @videos.each do |video|
+        %li= link_to video.created_at.strftime("%Y.%m.%d") + ' ' + video.title, video.url
