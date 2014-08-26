@@ -19,6 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
+job_type :runner, "cd :path && bundle exec script/rails runner -e :environment ':task' :output"
+
 every :friday, :at => '4:30 am' do
   runner "Video.archive!"
 end
