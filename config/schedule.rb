@@ -18,6 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+env 'SHELL', '/usr/bin/zsh'
 
 job_type :runner, "cd :path && bundle exec script/rails runner -e :environment ':task' :output"
 
