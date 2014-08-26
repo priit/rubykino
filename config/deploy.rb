@@ -1,5 +1,6 @@
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano'
+require "whenever/capistrano"
 
 #=============================================================================
 # REQUIRED VARIABLES
@@ -20,6 +21,8 @@ set :deploy_to, "/home/rubykino/rubykino"
 default_run_options[:pty] = true
 
 set :bundle_flags, '--deployment'
+
+set :whenever_command, "bundle exec whenever"
 
 # =============================================================================
 # SERVER RESTART
@@ -45,3 +48,4 @@ namespace :deploy do
     run "cd #{release_path}/ && rake assets:precompile"  
   end  
 end
+

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.19'
 gem 'rake', '10.0.4'
 gem 'pg', '0.15.1'
 gem 'jquery-rails', '2.1.4'
@@ -8,6 +8,12 @@ gem 'devise', '2.2.3'
 gem 'cancan', '1.6.9'
 gem 'zurb-foundation', '4.1.6'
 gem 'haml', '4.0.2'
+
+# needed for calculating next meetup date
+gem 'chronic', '~> 0.10.2' 
+
+# manage cron tasks
+gem 'whenever', '0.9.2', :require => false
 
 group :assets do
   gem 'sass-rails',   '3.2.6'
