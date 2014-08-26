@@ -18,7 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-env 'SHELL', '/usr/bin/zsh'
+
+# All jobs are wrapped in this template.
+set :job_template, "/bin/zsh -l -c ':job'"
 
 job_type :runner, "cd :path && bundle exec script/rails runner -e :environment ':task' :output"
 
